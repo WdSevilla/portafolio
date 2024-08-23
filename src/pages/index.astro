@@ -3,14 +3,129 @@
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Wil Sevilla</title>
+    <script type:"module">
+      function filterCategory(category) {
+        const projects = document.querySelectorAll('.category');
+      
+        projects.forEach(project => {
+        if (category === 'all') {
+          project.style.display = 'block';
+        } else {
+          project.style.display = project.classList.contains(category) ? 'block' : 'none';
+        }
+        });
+      }
+      </script>
+  </head>
+  <body class="bg-slate-200">
+    <div class="grid grid-cols-1 gap-6 pb-10 lg:pt-5 p-4 lg:justify-items-center ">
+      <div class="bg-white rounded-xl lg:w-2/4">
+        <div>
+          <img
+            src="https://avatars.githubusercontent.com/u/45079501?v=4"
+            alt="profile"
+            class="w-48 rounded-full mx-auto pt-3"
+          />
+        </div>
+        <div class="text-center pt-2">
+          <p>Wifredo Sevilla</p>
+          <p>Desarrollador Web FullStack</p>
+        </div>
+
+        <div class="p-12 text-left">
+          <p>Sobre Mi</p>
+          <p>
+            Con más de dos años de experiencia en Tecnología de la Información,
+            he destacado en soporte técnico, administracion y mantenimiento de
+            redes y mesa de ayuda, brindando soluciones efectivas. Poseo sólidos
+            conocimientos en Microsoft Azure, control de versiones con GitHub y
+            programación JavaScript con el frameworks Vue y Astro desarrollo de
+            APi con NodeJS y Express.
+          </p>
+        </div>
+        <div class="text-right p-6">
+          <button class="bg-yellow-300 p-2 rounded-full">Descargar CV</button>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl lg:w-2/4">
+        <div class="text-center pt-2">
+          <p>Experiencia</p>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-4 p-12">
+          <div>
+            <p>
+              Puesto: FullStack JavaScript. Innovalink, La Fortuna, San Carlos.
+              (6 meses de practica) He llevado a cabo una practica a tiempo
+              parcial en InnovaLink, donde he llevado a cabo tareas de nivel
+              junior. Mis responsabilidades incluyen:Creación de páginas de
+              aterrizaje (landings) efectivas y atractivas siguiendo los diseños
+              proporcionados.Frontend Vue JS, React y Astro.Desarrollo de APIs
+              utilizando Express y Node.js.Integración de APIs de terceros para
+              mejorar la funcionalidad de las aplicaciones.Implementación de
+              estilos utilizando Tailwind CSS, CSS estándar y HTML.Programación
+              en JavaScript para agregar interactividad y funcionalidad a las
+              páginas web.Habilidades AdquiridasDesarrollo Backend con Node.js
+              y Express.Integración y consumo de APIs.Maquetación y diseño con
+              HTML, CSS y Tailwind CSS.Programación Frontend con JavaScript.
+            </p>
+          </div>
+          <div>
+            <p>
+              Puesto: Asistente TI. Hotel Amor Arenal, La Fortuna, San Carlos.
+              (Set 2021-Ene 2024). Mantenimiento preventivo y correctivo de
+              equipo de cómputo, Windows Server, uso y configuración de los
+              módulos del sistema Monolith, mantenimiento de redes, cableado
+              estructurado, instalación y configuración de equipo de CCTV,
+              soporte a usuarios finales, configuración de equipos de cómputo
+              siguiendo los procedimientos establecidos por la empresa, fusiones
+              de fibra óptica, acomodo de fibra en rosetas, uso de OTDR y demás
+              equipo de fibra óptica, configuración de puertos de ONT.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl lg:w-2/4 ">
+        <p class="text-center pt-4">Formacion</p>
+        <div class="grid grid-rows-4 gap-8 text-center pb-2">
+          <div>Estudiante de Ingeniera de Sistemas UISIL</div>
+          <div>Tecnico en Informatica Empresrial CTP La Tigra</div>
+          <div>Microsoft Azure VLA</div>
+          <div>Administracion de Linux UDEMY</div>
+        </div>
+      </div>
+
+
+	  <div class="bg-white rounded-xl lg:w-2/4 ">
+		<p class="text-center pt-4">Portafolio</p>
+		<div>
+		  <div class="flex flex-row  space-x-4 lg:space-x-8 p-6">
+			<button onclick="filterCategory('all')" class="focus:bg-yellow-300 p-2 rounded-xl">Todos los Proyectos</button>
+			<button onclick="filterCategory('frontend')" class="focus:bg-yellow-300 p-2 rounded-xl">Frontend</button>
+			<button onclick="filterCategory('backend')" class="focus:bg-yellow-300 p-2 rounded-xl">Backend</button>
+		  </div>
+		  <div class="flex flex-col lg:flex-row items-center space-x-4 lg:space-x-7 lg:justify-center pb-4">
+			<div class="category frontend">
+			  <img class="w-48 h-48" src="https://i.ibb.co/7nxW4MN/down.jpg" alt="">
+			</div>
+			<div class="category backend">
+			  <img class="w-48 h-48" src="https://i.ibb.co/7nxW4MN/down.jpg" alt="">
+			</div>
+			<div class="category frontend">
+			  <img class="w-48 h-48" src="https://i.ibb.co/7nxW4MN/down.jpg" alt="">
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+
+
+    </div>
+
+  </body>
 </html>
